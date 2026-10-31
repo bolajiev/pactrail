@@ -55,7 +55,7 @@ and in this document.
 - [x] Demo script
 - [x] Automated tests
 - [x] No secrets committed
-- [ ] Public GitHub URL
+- [x] Public GitHub URL: https://github.com/bolajiev/pactrail
 - [x] Demo video file: `docs/pactrail-demo.mp4` (3:12, captioned)
 - [ ] DoraHacks build submitted with exact track
 

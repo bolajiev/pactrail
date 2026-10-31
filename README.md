@@ -2,6 +2,8 @@
 
 **Turn commercial agreements into verifiable milestone payments.**
 
+[github.com/bolajiev/pactrail](https://github.com/bolajiev/pactrail)
+
 PactRail connects the terms of a commercial agreement to milestone escrow settlement. It extracts proposed terms from agreement text, requires the parties to review and approve every field, commits a canonical SHA-256 terms hash, and uses a milestone escrow contract to hold test stablecoins until evidence is approved or a dispute is resolved by the named arbitrator.
 
 > **Prototype notice:** PactRail is a hackathon prototype for test networks. It uses test assets only. It does not move real money, does not provide legal advice, and does not establish legal enforceability, identity verification, sanctions compliance, or regulatory approval.
@@ -281,7 +283,7 @@ Submission checklist:
 - [x] Threat model
 - [x] Demo script
 - [x] Demo recording (`docs/pactrail-demo.mp4`, 3:12, captioned)
-- [ ] Public GitHub repository URL (this repository)
+- [x] Public GitHub repository: https://github.com/bolajiev/pactrail
 - [ ] DoraHacks build submission and exact track selection
 
 ## Documentation
