@@ -1,0 +1,115 @@
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/newsreader";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --canvas: #f1eee6;
+  --surface: #faf9f4;
+  --ink: #16211e;
+}
+
+* {
+  border-color: theme("colors.line.DEFAULT");
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: theme("fontFamily.sans");
+  font-feature-settings: "cv11", "ss01";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #b9d3c2;
+  color: #123027;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: theme("fontFamily.serif");
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.forest.600");
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.hairline {
+  background-image: linear-gradient(to right, transparent, rgba(22, 33, 30, 0.1), transparent);
+  height: 1px;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #c9c3b3 transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c9c3b3;
+  border-radius: 999px;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(22, 33, 30, 0.05) 25%,
+    rgba(22, 33, 30, 0.09) 37%,
+    rgba(22, 33, 30, 0.05) 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+
+.hash {
+  font-family: theme("fontFamily.mono");
+  font-size: 0.72rem;
+  letter-spacing: 0.01em;
+  word-break: break-all;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
