@@ -56,6 +56,7 @@ and in this document.
 - [x] Automated tests
 - [x] No secrets committed
 - [x] Public GitHub URL: https://github.com/bolajiev/pactrail
+- [x] Live hosted demo: https://pactrail-ochre.vercel.app
 - [x] Demo video file: `docs/pactrail-demo.mp4` (3:11, captioned)
 - [ ] DoraHacks build submitted with exact track
 

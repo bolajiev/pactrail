@@ -2,7 +2,7 @@
 
 **Turn commercial agreements into verifiable milestone payments.**
 
-[github.com/bolajiev/pactrail](https://github.com/bolajiev/pactrail)
+[github.com/bolajiev/pactrail](https://github.com/bolajiev/pactrail) · [Live demo](https://pactrail-ochre.vercel.app)
 
 PactRail connects the terms of a commercial agreement to milestone escrow settlement. It extracts proposed terms from agreement text, requires the parties to review and approve every field, commits a canonical SHA-256 terms hash, and uses a milestone escrow contract to hold test stablecoins until evidence is approved or a dispute is resolved by the named arbitrator.
 
@@ -111,7 +111,7 @@ pnpm dev
 
 If you cloned the repository rather than receiving this working directory, also run `git submodule update --init --recursive` once to fetch `forge-std` for the contract tests.
 
-Open `http://localhost:3000`. No environment variables are required. The app starts in the demo workspace with four realistic sample agreements and the rules-based extraction fallback.
+Open `http://localhost:3000` (or the [hosted demo](https://pactrail-ochre.vercel.app)). No environment variables are required. The app starts in the demo workspace with four realistic sample agreements and the rules-based extraction fallback. The hosted deployment is demo-only: no live escrow addresses or server secrets are configured there.
 
 Then:
 
@@ -284,6 +284,7 @@ Submission checklist:
 - [x] Demo script
 - [x] Demo recording (`docs/pactrail-demo.mp4`, 3:11, captioned)
 - [x] Public GitHub repository: https://github.com/bolajiev/pactrail
+- [x] Hosted demo: https://pactrail-ochre.vercel.app
 - [ ] DoraHacks build submission and exact track selection
 
 ## Documentation
