@@ -49,7 +49,16 @@ export function AgreementTable({
   return (
     <div>
       <div className="hidden overflow-hidden md:block">
-        <table className="w-full border-collapse text-left">
+        <table className={cn("w-full border-collapse text-left", compact && "table-fixed")}>
+          {compact ? (
+            <colgroup>
+              <col style={{ width: "36%" }} />
+              <col style={{ width: "20%" }} />
+              <col style={{ width: "12%" }} />
+              <col style={{ width: "28%" }} />
+              <col style={{ width: "4%" }} />
+            </colgroup>
+          ) : null}
           <thead>
             <tr className="border-b border-line text-[0.62rem] font-bold uppercase tracking-[0.12em] text-ink-faint">
               <th className={cn("px-5 py-3 font-bold lg:px-6", compact ? "min-w-[210px]" : "min-w-[220px]")}>
@@ -87,17 +96,33 @@ export function AgreementTable({
                       href={`/agreements/${agreement.id}`}
                       className="block outline-none after:absolute after:inset-0 after:content-[''] focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-forest-600"
                     >
-                      <span className="flex items-center gap-2">
-                        <span className="line-clamp-1 text-[0.82rem] font-semibold text-ink group-hover:text-forest-800">
-                          {agreement.title}
-                        </span>
-                        {agreement.sample ? <DemoBadge /> : null}
-                        {compact ? <AgreementStatusBadge status={status} /> : null}
-                      </span>
-                      <span className="mt-0.5 block truncate text-[0.68rem] text-ink-faint">
-                        {agreement.mode === "demo" ? "Demo record" : "On-chain record"} ·{" "}
-                        {formatDate(agreement.createdAt)}
-                      </span>
+                      {compact ? (
+                        <>
+                          <span className="line-clamp-2 text-[0.82rem] font-semibold leading-snug text-ink group-hover:text-forest-800">
+                            {agreement.title}
+                          </span>
+                          <span className="mt-1 flex flex-wrap items-center gap-1.5">
+                            <AgreementStatusBadge status={status} />
+                            {agreement.sample ? <DemoBadge /> : null}
+                            <span className="text-[0.63rem] text-ink-faint">
+                              {formatDate(agreement.createdAt)}
+                            </span>
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="flex items-center gap-2">
+                            <span className="line-clamp-1 text-[0.82rem] font-semibold text-ink group-hover:text-forest-800">
+                              {agreement.title}
+                            </span>
+                            {agreement.sample ? <DemoBadge /> : null}
+                          </span>
+                          <span className="mt-0.5 block truncate text-[0.68rem] text-ink-faint">
+                            {agreement.mode === "demo" ? "Demo record" : "On-chain record"} ·{" "}
+                            {formatDate(agreement.createdAt)}
+                          </span>
+                        </>
+                      )}
                     </Link>
                   </td>
                   <td className="max-w-[170px] px-3 py-3.5">

@@ -282,7 +282,7 @@ Submission checklist:
 - [x] Architecture documentation
 - [x] Threat model
 - [x] Demo script
-- [x] Demo recording (`docs/pactrail-demo.mp4`, 3:12, captioned)
+- [x] Demo recording (`docs/pactrail-demo.mp4`, 3:11, captioned)
 - [x] Public GitHub repository: https://github.com/bolajiev/pactrail
 - [ ] DoraHacks build submission and exact track selection
 

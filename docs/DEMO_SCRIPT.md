@@ -167,4 +167,4 @@ Return to **Overview**.
 
 ## Screen recording
 
-A captioned screen recording of the demo path is provided at `docs/pactrail-demo.mp4` (3:12). The recording shows the actual application and local demo events; it does not depict a public testnet deployment.
+A captioned screen recording of the demo path is provided at `docs/pactrail-demo.mp4` (3:11). The recording shows the actual application and local demo events; it does not depict a public testnet deployment.
